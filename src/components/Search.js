@@ -22,7 +22,7 @@ class Search extends Component {
 
     if (this.state.tags.length > 0) {
       fetch(
-        `https://api.elsevier.com/content/search/scopus?query=all(${this.state.tags.join()})&apiKey=ff5085ef938d3d7d95ae111e5b85ff6b`
+        `https://api.elsevier.com/content/search/scopus?query=all(${this.state.tags.join()})&apiKey=${process.env.REACT_APP_SCOPUS}`
       )
         .then((response) => response.json())
         .then((data) => {
@@ -57,7 +57,7 @@ class Search extends Component {
       this.setState({ search: "" });
 
       fetch(
-        `https://api.elsevier.com/content/search/scopus?query=all(${this.state.tags.join()})&apiKey=ff5085ef938d3d7d95ae111e5b85ff6b`
+        `https://api.elsevier.com/content/search/scopus?query=all(${this.state.tags.join()})&apiKey=${process.env.REACT_APP_SCOPUS}`
       )
         .then((response) => response.json())
         .then((data) => {
