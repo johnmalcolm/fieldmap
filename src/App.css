@@ -1,5 +1,11 @@
+body{
+  background-color: white;
+}
+
 .App {
+  max-width: 1366px;
   text-align: center;
+  margin: 0 auto;
 }
 
 .hide{
@@ -7,6 +13,7 @@
 }
 
 header{
+  background-color: white;
   margin-bottom: 20px;
 }
 
@@ -59,7 +66,7 @@ header{
 
 .stats-box{
   width: 100%;
-  background-color: gray;
+  background-color: white;
   height: 100%;
   position: absolute;
   top: 0px;
@@ -133,4 +140,42 @@ a:hover{
   text-align: left;
   font-size: 13px;
   padding-bottom: 3px;
+}
+
+.instructions-box{
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.instructions{
+  border: 1px solid black;
+  background-color: white;
+  height: 100%;
+  width: 30%;
+  display: flex;
+}
+
+.instructions img{
+  width: 40%;
+  display: block;
+}
+
+.instruction-text{
+  box-sizing: border-box;
+  align-self: flex-end;
+  width: 58%;
+  padding-left: 10px;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.instruction-text h3{
+  font-size: 18px;
+  margin-bottom: 3px;
+}
+
+.instruction-text span{
+  font-size: 14px;
 }

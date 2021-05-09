@@ -47,7 +47,6 @@ class Search extends Component {
   };
 
   populateArticleFeed = (data) => {
-    console.log(data);
     this.setState({ articlesArray: data["search-results"].entry });
   };
 
@@ -61,7 +60,18 @@ class Search extends Component {
       )
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
+          console.log('>>> First')
+            data['search-results'].entry.forEach(element => {
+              console.log(element['prism:publicationName'])
+            });
+          fetch(data["search-results"].link[2]['@href'])
+          .then((response) => response.json())
+          .then((data) => {
+            console.log('>>> Second')
+            data['search-results'].entry.forEach(element => {
+              console.log(element['prism:publicationName'])
+            });
+          });
           let newCount = data["search-results"]["opensearch:totalResults"];
           this.setState({ articleCount: newCount });
           this.populateArticleFeed(data);
