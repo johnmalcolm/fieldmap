@@ -6,11 +6,9 @@ function App() {
   return (
     <div className="App">
       <header>
-      <div id="full-logo">
-          <header>
-            <img id="logo" src={logo} />
-            <h1 id="brandmark">fieldmap</h1>
-          </header>
+        <div id="full-logo">
+          <img id="logo" src={logo} />
+          <h1 id="brandmark">fieldmap</h1>
         </div>
       </header>
       <section className="instructions-box">
@@ -37,7 +35,11 @@ function App() {
         </div>
       </section>
       <div className="search">
+        <h1>Search</h1>
         <Search />
+      </div>
+      <div className="gallery">
+
       </div>
     </div>
   );
