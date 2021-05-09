@@ -8,7 +8,7 @@ function App() {
       <header>
         <div id="full-logo">
           <img id="logo" src={logo} />
-          <h1 id="brandmark">fieldmap</h1>
+          <div id="brandmark">fieldmap</div>
         </div>
       </header>
       <section className="instructions-box">
