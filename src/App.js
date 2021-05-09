@@ -10,6 +10,10 @@ function App() {
           <img id="logo" src={logo} />
           <div id="brandmark">fieldmap</div>
         </div>
+        <div className="sign-in">
+          <img className="profile-img" src="./profile.svg"></img>
+          <span className="sign-in-text">Sign In</span>
+        </div>
       </header>
       <section className="instructions-box">
         <div className="instructions">

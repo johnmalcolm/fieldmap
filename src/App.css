@@ -1,6 +1,8 @@
 body{
   background-color: #f0f0f0;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Work Sans', sans-serif; */
+
 }
 
 .App {
@@ -215,4 +217,21 @@ header{
   border: 1px solid black;
   margin: 20px auto;
   height: 60px;
+}
+
+.sign-in{
+  float: right;
+  padding: 15px;
+  display: flex
+}
+
+.profile-img{
+  width: 30px;
+}
+
+.sign-in-text{
+  font-size: 14px;
+  align-self: center;
+  padding-left: 8px;
+  font-weight: 500;
 }
