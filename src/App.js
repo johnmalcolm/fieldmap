@@ -43,7 +43,15 @@ function App() {
         <Search />
       </div>
       <div className="gallery">
-
+        <h3 className="showcase">Showcase</h3>
+        <div className="showcase-inner">
+          <section className="gallery-item" id="queer-affections">
+            <h2>Exploring Sexuality & Law in Russia & The Soviet Union</h2>
+          </section>
+          <section className="gallery-item" id="ux-design">
+            <h2>Popular research in the field of User Experience</h2>
+          </section>
+        </div>
       </div>
     </div>
   );

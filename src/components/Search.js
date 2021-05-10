@@ -60,18 +60,10 @@ class Search extends Component {
       )
         .then((response) => response.json())
         .then((data) => {
-          console.log('>>> First')
+          console.log(data)
             data['search-results'].entry.forEach(element => {
               console.log(element['prism:publicationName'])
             });
-          fetch(data["search-results"].link[2]['@href'])
-          .then((response) => response.json())
-          .then((data) => {
-            console.log('>>> Second')
-            data['search-results'].entry.forEach(element => {
-              console.log(element['prism:publicationName'])
-            });
-          });
           let newCount = data["search-results"]["opensearch:totalResults"];
           this.setState({ articleCount: newCount });
           this.populateArticleFeed(data);
@@ -111,9 +103,6 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <div className="counter">
-          {this.numberWithCommas(this.state.articleCount)}
-        </div>
         <div
           onClick={this.showStats}
           className={`stats ${
@@ -125,13 +114,20 @@ class Search extends Component {
           Stats
         </div>
         {/* <div className="stats-box"></div> */}
-        <input
-          className="search-box"
-          value={this.state.search}
-          onChange={this.onChange}
-          onKeyDown={this.onKeyDown}
-        />
+        <div id="search-outer">
+          <input
+            className="search-box"
+            value={this.state.search}
+            onChange={this.onChange}
+            onKeyDown={this.onKeyDown}
+          />
+          <button>Find</button>
+        </div>
         <div>
+         <div id="count-explore">
+          <div id="article-count">{this.numberWithCommas(this.state.articleCount)}</div>
+          <button id="explore">Results</button>
+         </div>
           <div className="tags">
             {this.state.tags.map((tag) => {
               return (
